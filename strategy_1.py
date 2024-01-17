@@ -49,6 +49,15 @@ class FiftyPercent(DiscountStrategy):
 class NoDiscount(DiscountStrategy):
     def calculate(self, value: float) -> float:
         return value
+    
+
+
+class CustomDiscount(DiscountStrategy):
+    def __init__(self, discount):
+        self.discount = discount / 100
+
+    def calculate(self, value: float) -> float:
+        return value - (value * self.discount)
 
 
 if __name__ == '__main__':
