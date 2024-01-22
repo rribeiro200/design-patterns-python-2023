@@ -89,4 +89,5 @@ if __name__ == '__main__':
 
     remote.increase_volume()
     remote.power()
+    remote.power()
     remote.increase_volume()
